@@ -8,6 +8,8 @@ $$
 \text{USB 5 V} \;\rightarrow\; \text{3.3 V regulator (U1)} \;\rightarrow\; \text{op-amp oscillator (U2)} \;\rightarrow\; \text{R6 + LED}
 $$
 
+![Circuit schematic. J1 is the USB-A plug, U1 the 3.3 V regulator, U2 the op-amp oscillator, D1 the LED. Full-size copy in `MP1_schematic.pdf`.](schematic.png)
+
 Only parts from the provided parts list were allowed. That list has one connector, one regulator, two op-amps (single/dual versions of the same part), three LED colours, seven capacitor values and a set of 1% resistors. So most parts had no alternative; the real choices were the oscillator topology, the timing values, single vs. dual op-amp, and the LED colour. Part names are the KiCad ones (the LTspice sim uses sim R4 = KiCad R5, sim R5 = KiCad R4, sim C1 = KiCad C4).
 
 **Why an op-amp oscillator.** There is no 555, microcontroller or crystal on the list, so the timer has to be built from the op-amp. A relaxation oscillator (Schmitt trigger + RC) needs one op-amp, one capacitor and a few resistors, gives a square wave that drives the LED directly, and has a simple period formula, which makes the tolerance analysis clean.
