@@ -1,0 +1,21 @@
+# KiCad
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*.kicad_pro-bak
+*-backups/
+.history/
+_autosave-*
+~*.lck
+*.lck
+fp-info-cache
+_restore_backup_*/
+
+# LTspice
+*.raw
+*.db
+*.op.raw
+*.log.raw
+
+# misc
+.DS_Store
+Thumbs.db
