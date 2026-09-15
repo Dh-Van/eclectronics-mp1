@@ -103,8 +103,8 @@ while i < len(lines):
         header, body = rows[0], rows[2:]
         n = len(header)
         if n >= 8:   # BOM: wide table, landscape page
-            spec = r"r l c l p{3.8cm} l l c p{3.4cm}"
-            out.append(r"\begin{landscape}\begin{scriptsize}\begin{tabular}{" + spec + "}")
+            spec = r"@{}r l c P{1.7cm} P{2.1cm} P{3.25cm} P{3.2cm} c P{1.85cm}@{}"
+            out.append(r"\begin{scriptsize}\setlength{\tabcolsep}{3pt}\begin{tabular}{" + spec + "}")
         else:
             spec = " ".join("l" * n)
             out.append(r"\begin{center}\begin{tabular}{" + spec + "}")
@@ -113,7 +113,7 @@ while i < len(lines):
         for r in body:
             out.append(" & ".join(inline(c) for c in r) + r" \\")
         out.append(r"\bottomrule")
-        out.append(r"\end{tabular}\end{scriptsize}\end{landscape}" if n >= 8 else r"\end{tabular}\end{center}")
+        out.append(r"\end{tabular}\end{scriptsize}" if n >= 8 else r"\end{tabular}\end{center}")
         out.append("")
         continue
     if re.match(r"^- ", ln) or re.match(r"^\d+\. ", ln):
@@ -125,7 +125,7 @@ while i < len(lines):
     if ln.strip() == "":
         out.append(""); i += 1; continue
     if re.match(r"^https?://\S+$", ln.strip()):
-        out.append(r"\begin{center}\url{" + ln.strip() + r"}\end{center}"); i += 1; continue
+        out.append(r"\nopagebreak\par\nopagebreak\vspace{4pt}\centerline{\url{" + ln.strip() + r"}}"); i += 1; continue
     out.append(inline(ln)); i += 1
 
 
@@ -134,9 +134,9 @@ doc = r"""\documentclass[11pt,letterpaper]{article}
 \usepackage{fontspec}
 \usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
-\usepackage{booktabs,tabularx}
+\usepackage{booktabs,tabularx,array}\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \usepackage{tikz}\usepackage{graphicx}\graphicspath{{""" + __import__('os').path.dirname(__import__('os').path.abspath(md_path)) + r"""/}}
-\usepackage{microtype}\usepackage{pdflscape}
+\usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
 \setlength{\parskip}{6pt}\setlength{\parindent}{0pt}
 \begin{document}
