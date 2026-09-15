@@ -78,7 +78,7 @@ def flush_list(kind, items):
 while i < len(lines):
     ln = lines[i]
     if ln.startswith("# "):
-        out.append(r"\title{" + inline(ln[2:]) + r"}\author{Dhvan Shah}\date{September 2026}\maketitle"); i += 1; continue
+        out.append(r"\begin{center}{\LARGE\bfseries " + inline(ln[2:]) + r"}\\[4pt]Dhvan Shah \quad ENGR 3430 \quad September 2026\end{center}\vspace{2pt}"); i += 1; continue
     if ln.startswith("## "):
         out.append(r"\section*{" + inline(ln[3:]) + "}"); i += 1; continue
     if ln.startswith("### "):
@@ -93,7 +93,7 @@ while i < len(lines):
     mi = re.match(r"^!\[(.*)\]\((.+)\)\s*$", ln)
     if mi:
         cap, src = mi.group(1), mi.group(2)
-        out.append(r"\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{" + src + "}"
+        out.append(r"\begin{figure}[htbp]\centering\includegraphics[width=0.85\textwidth]{" + src + "}"
                    + (r"\caption{" + inline(cap) + "}" if cap else "") + r"\end{figure}")
         i += 1; continue
     if ln.startswith("|"):
@@ -103,7 +103,7 @@ while i < len(lines):
         header, body = rows[0], rows[2:]
         n = len(header)
         if n >= 8:   # BOM: wide table, landscape page
-            spec = r"@{}r l c P{1.7cm} P{2.1cm} P{3.25cm} P{3.2cm} c P{1.85cm}@{}"
+            spec = r"@{}r l c P{1.7cm} P{3.0cm} P{3.25cm} P{3.2cm} c P{2.4cm}@{}"
             out.append(r"\begin{scriptsize}\setlength{\tabcolsep}{3pt}\begin{tabular}{" + spec + "}")
         else:
             spec = " ".join("l" * n)
@@ -130,15 +130,15 @@ while i < len(lines):
 
 
 
-doc = r"""\documentclass[11pt,letterpaper]{article}
+doc = r"""\documentclass[10pt,letterpaper]{article}
 \usepackage{fontspec}
-\usepackage[margin=1in]{geometry}
+\usepackage[margin=0.85in]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs,tabularx,array}\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \usepackage{tikz}\usepackage{graphicx}\graphicspath{{""" + __import__('os').path.dirname(__import__('os').path.abspath(md_path)) + r"""/}}
 \usepackage{microtype}
 \usepackage[hidelinks]{hyperref}
-\setlength{\parskip}{6pt}\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}\setlength{\parindent}{0pt}\usepackage{titlesec}\titlespacing*{\section}{0pt}{10pt}{4pt}\titlespacing*{\subsection}{0pt}{8pt}{3pt}\setlength{\abovedisplayskip}{4pt}\setlength{\belowdisplayskip}{4pt}
 \begin{document}
 """ + "\n".join(out) + "\n\\end{document}\n"
 open(out_path, "w").write(doc)
