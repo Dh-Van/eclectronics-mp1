@@ -103,7 +103,7 @@ while i < len(lines):
         header, body = rows[0], rows[2:]
         n = len(header)
         if n >= 8:   # BOM: wide table, landscape page
-            spec = r"@{}r l c P{1.7cm} P{3.0cm} P{3.25cm} P{3.2cm} c P{2.4cm}@{}"
+            spec = r"@{}r l c P{1.7cm} P{2.5cm} P{3.25cm} P{3.2cm} c P{2.0cm}@{}"
             out.append(r"\begin{scriptsize}\setlength{\tabcolsep}{3pt}\begin{tabular}{" + spec + "}")
         else:
             spec = " ".join("l" * n)
@@ -130,9 +130,9 @@ while i < len(lines):
 
 
 
-doc = r"""\documentclass[10pt,letterpaper]{article}
+doc = r"""\documentclass[11pt,letterpaper]{article}
 \usepackage{fontspec}
-\usepackage[margin=0.85in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs,tabularx,array}\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \usepackage{tikz}\usepackage{graphicx}\graphicspath{{""" + __import__('os').path.dirname(__import__('os').path.abspath(md_path)) + r"""/}}
