@@ -3,25 +3,27 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(property "Reference" "REF**"
-		(at 0.381305 -3.152125 0)
+	(property "Reference" "U1"
+		(at -1.1 -2 0)
+		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "ef991594-8640-4835-b770-8eec020058ae")
+		(uuid "c40860ed-1f01-45c2-84a6-7835f3aa2987")
 		(effects
 			(font
-				(size 1.641315 1.641315)
-				(thickness 0.15)
+				(size 0.8 0.8)
+				(thickness 0.12)
 			)
 		)
 	)
-	(property "Value" "SOT95P255X145-3N"
-		(at 10.93553 3.25523 0)
+	(property "Value" "MCP1702T-3302E_CB"
+		(at 0 -2 0)
+		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "8c317a09-abce-490c-ac20-01e60f73d9b9")
+		(uuid "9f7e9357-acdc-47d9-bb6c-a13a99fde5f4")
 		(effects
 			(font
-				(size 1.642031 1.642031)
-				(thickness 0.15)
+				(size 0.4 0.4)
+				(thickness 0.08)
 			)
 		)
 	)
@@ -29,24 +31,169 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "7194ea98-d46e-48ad-b702-b68646fd4a91")
+		(uuid "28b5ba65-bf24-479a-95b9-27a57749253d")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Pwr Sply Func,Voltage Regulator,LDO, Positive Voltage Out,SOT-23A,IS 2uA,VO 3.3V | Microchip Technology Inc. MCP1702T-3302E/CB"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "603e28c9-ab43-4bb1-af9c-1161220209a4")
+		(uuid "b201947b-39a4-4da2-a052-fe3fd31f8039")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property "DigiKey_Part_Number" "MCP1702T-3302E/CBCT-ND"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7bd72618-26e4-4249-8282-7bbe48405226")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SnapEDA_Link" "https://www.snapeda.com/parts/MCP1702T-3302E/CB/Microchip+Technology/view-part/?ref=snap"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "86d738bd-0143-42ab-9576-73c18cb87956")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PACKAGE" "SOT23-3"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4b521704-58f4-48dd-b526-6d2b22908590")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MPN" "MCP1702T-3302E/CB"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "103c1416-59ad-4263-a0b2-9dca8eb67904")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "SOT-23-3 Microchip"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7db8639f-fe99-4c78-9bcb-fa7cdf54a93c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "OC_FARNELL" "1331490"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4ea364dc-ad27-4907-81cb-281491506a3c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MF" "Microchip"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fbdcbb36-37d5-41c4-9ccf-ea7decaeee49")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MP" "MCP1702T-3302E/CB"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "25a20877-9bde-415a-8213-e3cfc262b924")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SUPPLIER" "Microchip"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "84c1fbef-47b0-4459-84b5-06886d0334da")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "OC_NEWARK" "84R5179"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f8f3685a-2c98-4773-a338-90c7cf873dc1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Check_prices" "https://www.snapeda.com/parts/MCP1702T-3302E/CB/Microchip+Technology/view-part/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7381b0f3-be09-417d-a906-a5ca119fbc2d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "MP1.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_line
@@ -57,7 +204,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4abdc745-cf30-4345-bafd-cb7152f2547e")
+		(uuid "ed0b4884-71f8-494e-94d5-3900f6de554f")
 	)
 	(fp_line
 		(start -0.6096 -0.889)
@@ -67,7 +214,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "a621aaa3-bde2-4e3b-85c9-1400e0621bce")
+		(uuid "9a8c03b4-24c8-45b6-ad60-2a544503a361")
 	)
 	(fp_line
 		(start 1.5494 -0.889)
@@ -77,7 +224,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "a812413e-045e-4cef-9c17-73e172ea3754")
+		(uuid "e5a76af1-1677-4591-8ecc-ce4ede7a9448")
 	)
 	(fp_line
 		(start 1.5494 0.4572)
@@ -87,7 +234,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "caee85ce-ef2c-4a02-a5c2-5344640c2645")
+		(uuid "b184a1c2-d074-42ab-bb5d-72b332e71fad")
 	)
 	(fp_line
 		(start -1.5494 -0.889)
@@ -97,7 +244,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "c988752b-a193-46e9-873f-97237ae480c5")
+		(uuid "11092f9f-516a-436a-8302-6bf72d75d871")
 	)
 	(fp_line
 		(start -1.5494 0.889)
@@ -107,7 +254,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "28bf4e15-a548-4e74-8530-3c1c9bab6aa9")
+		(uuid "637f6bb6-b7f5-4439-98f0-9effadf9a64b")
 	)
 	(fp_line
 		(start -1.1938 0.889)
@@ -117,7 +264,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "fc6dcb24-ce32-46ef-86d1-6dd3b5c028dd")
+		(uuid "5a767782-64c4-420b-afeb-5efeb14a65d3")
 	)
 	(fp_line
 		(start -1.1938 1.4986)
@@ -127,7 +274,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "1c98ceed-057c-4cf8-9bd4-8dbed199f573")
+		(uuid "0268bb93-1e77-4a33-aacf-f4fab36997d0")
 	)
 	(fp_line
 		(start -0.6858 0.889)
@@ -137,7 +284,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "cc8e97a5-5c50-4469-a965-9b821864b845")
+		(uuid "4945b95f-7fa6-45dc-ba65-04dbafb2e063")
 	)
 	(fp_line
 		(start -0.6858 1.4986)
@@ -147,7 +294,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "adbe53f4-63a8-40a3-91c1-eadb1086a1fd")
+		(uuid "19e5a7e7-c3b6-4cd7-a31f-2821c092a7de")
 	)
 	(fp_line
 		(start -0.254 -1.4986)
@@ -157,7 +304,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "bc363222-8c79-45aa-96cc-573ff12fa291")
+		(uuid "19290d87-d452-453a-9ed0-022a5c954f6b")
 	)
 	(fp_line
 		(start -0.254 -0.889)
@@ -167,7 +314,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "b656c938-27ed-4496-9f95-f6889a0ff7a9")
+		(uuid "7030b65d-bd42-4ee8-a422-ed5b1d0835ce")
 	)
 	(fp_line
 		(start 0.254 -1.4986)
@@ -177,7 +324,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "21aa62fc-13cd-42a6-8baa-6a32761de2f9")
+		(uuid "98d13cdc-8ccc-4f52-ba73-5348c8eff3ce")
 	)
 	(fp_line
 		(start 0.254 -0.889)
@@ -187,7 +334,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "703f1a9f-d01b-4c4c-b4ca-921aad230385")
+		(uuid "1fb54047-92e4-4632-8852-eb6177725a19")
 	)
 	(fp_line
 		(start 0.6858 0.889)
@@ -197,7 +344,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "ebef8f8a-5e42-4970-b364-4e88bae7075d")
+		(uuid "e75381a0-cdae-4330-b967-51c7e6edf7c5")
 	)
 	(fp_line
 		(start 0.6858 1.4986)
@@ -207,7 +354,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "99bc613f-9cb8-489c-b92f-cf431934ef3c")
+		(uuid "41530e85-d6c9-4025-871c-9e26fc79092c")
 	)
 	(fp_line
 		(start 1.1938 0.889)
@@ -217,7 +364,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "97b63b5e-fea9-4e08-bae7-3287597c8573")
+		(uuid "623cacb3-d342-4960-a974-96bd742a4eca")
 	)
 	(fp_line
 		(start 1.1938 1.4986)
@@ -227,7 +374,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "9b1a3cf2-6b19-45fe-af5c-a5eebac606b4")
+		(uuid "3b10bc1f-8a94-4df4-9083-c968aec892e6")
 	)
 	(fp_line
 		(start 1.5494 -0.889)
@@ -237,7 +384,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "0a17a4df-1066-40b9-8a3c-50915c19e6b0")
+		(uuid "00a617ef-b9e3-489d-9ea7-ed4d13089d55")
 	)
 	(fp_line
 		(start 1.5494 0.889)
@@ -247,28 +394,40 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "aba9284d-e2ec-4900-9c85-e482d189c670")
+		(uuid "37ea40b8-5b2a-4934-8c21-3d0f389d0986")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "d05d4025-1f31-4988-88c7-4ab71390c50c")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
 	)
 	(pad "1" smd rect
 		(at -0.9398 1.1938)
 		(size 0.5588 1.3208)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "b969fb64-1a4c-4f49-bdd4-43527b982f6f")
+		(uuid "319a9b26-caf2-447b-b169-dd47cf4f542e")
 	)
 	(pad "2" smd rect
 		(at 0.9398 1.1938)
 		(size 0.5588 1.3208)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "f5862335-a652-4951-9758-e9f9049ab408")
+		(uuid "c9344247-ea5a-4ebe-971f-7e05876a4314")
 	)
 	(pad "3" smd rect
 		(at 0 -1.1938)
 		(size 0.5588 1.3208)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "026011af-3f8f-4e03-98d2-b5b8793d2f1b")
+		(uuid "ea11941a-72d5-460d-ae73-2ecd8bfef226")
 	)
 	(embedded_fonts no)
 )

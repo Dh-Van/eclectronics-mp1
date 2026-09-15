@@ -3,50 +3,275 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(property "Reference" "REF**"
-		(at 1.12 -3.335 0)
+	(property "Reference" "U2"
+		(at 0.25 1.7 180)
+		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "494691a8-3693-4b21-b434-1ada64bbe7f5")
+		(uuid "e4df0c10-7bbd-4a2f-8afd-c691809f2e36")
 		(effects
 			(font
-				(size 1 1)
-				(thickness 0.15)
+				(size 0.8 0.8)
+				(thickness 0.12)
 			)
 		)
 	)
-	(property "Value" "SOT95P280X145-5N"
-		(at 8.105 3.335 0)
+	(property "Value" "MCP6021T-E_OT"
+		(at -0.5 -2.45 180)
+		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "cf3f1db2-bc6e-4118-939e-146f6c299456")
+		(uuid "c269b801-8bd3-4197-8d84-e617e657b561")
 		(effects
 			(font
-				(size 1 1)
-				(thickness 0.15)
+				(size 0.4 0.4)
+				(thickness 0.08)
 			)
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5de5e855-f0e3-46da-a560-99ae583ff740")
+		(uuid "98182361-5672-4886-a612-814760c463d1")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
-		(at 0 0 0)
+	(property "Description" "Op Amp, SOT-23-5, 3.90mm (.150in) T/R, Single 2.5V 10 MHz OP, E Temp | Microchip Technology Inc. MCP6021T-E/OT"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "b487936a-3445-4f93-bf02-2f5c142b77c9")
+		(uuid "45dba86f-fd63-4257-a848-a61e16258414")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property "MF" "Microchip"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b63df981-5fc2-40a0-a213-a27b32489fc3")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MAXIMUM_PACKAGE_HEIGHT" "1.45mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f7193c30-1173-42ee-8249-23ce0928981b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "CREATOR" "AMINA"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "89ff9cd8-4684-411f-bd2d-6c70105aa42e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "NOTES" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d23cad1c-4b1f-4426-88d3-d9e952bf3413")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "SOT-23-5 Microchip"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7d0eb7dd-1d7a-4895-8358-91301e921c3a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Check_prices" "https://www.snapeda.com/parts/MCP6021T-E/OT/Microchip+Technology/view-part/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fe83b3d3-da7d-4b3b-8964-df36d6ed9798")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "VERIFIER" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6d19a76c-e292-4433-955c-4f592f6ddd4f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "STANDARD" "IPC 7351B"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0d050765-7ecc-48e9-9a25-3f61000f51b2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PARTREV" "E"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "075d44dc-f446-4ef8-a0a4-6dd12f998c92")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "DUPLICATE" "MCP6021T-I/OT-,-MCP6021-E/OT-,-MCP6021-I/OT"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8c454221-9ba9-4436-a258-e812ce7c1fd1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SnapEDA_Link" "https://www.snapeda.com/parts/MCP6021T-E/OT/Microchip+Technology/view-part/?ref=snap"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b5832132-06f7-422c-af64-35c6589d0ca2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MP" "MCP6021T-E/OT"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6afe915a-bb29-44ac-9972-77e1be43e3a4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=235813&manufacturer=Microchip&part_name=MCP6021T-E/OT&search_term=mcp6021t-e"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0d8d8cfc-ae6b-44b2-85ee-1252d0374c3b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Availability" "In Stock"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "97b5c7a7-2649-4359-8fca-49a1dc835d52")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Price" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a37f1b94-f1f8-4cbe-8867-e0b63e986bae")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "UNIT" "MM"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "29aa8c4f-fe1c-4f92-9e73-f297bcbba14e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER" "Microchip"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3e25fd59-e97c-4339-852b-974aa0cfb644")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "MP1.kicad_sch")
 	(attr smd)
 	(duplicate_pad_numbers_are_jumpers no)
 	(fp_circle
@@ -58,7 +283,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "839f177d-f9a2-402a-b194-cbd3dfc7aad3")
+		(uuid "f4d18459-9a6a-48ca-a324-e75067fcd5d8")
 	)
 	(fp_line
 		(start -2.055 -1.7)
@@ -68,7 +293,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "5bcf4648-998a-4c57-8af0-08495db2f556")
+		(uuid "b2218559-fa0d-4297-922c-c67dfa799b01")
 	)
 	(fp_line
 		(start -2.055 1.7)
@@ -78,7 +303,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "242afa94-8811-4d33-a585-f6145b62ae1a")
+		(uuid "b641d532-f33c-46d4-ad8b-81616966c3f9")
 	)
 	(fp_line
 		(start 2.055 -1.7)
@@ -88,7 +313,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "6694cddb-6b96-4886-a588-5b03097ce745")
+		(uuid "2cfc6ed6-4cbc-41dd-b8ee-0ddbeb345b98")
 	)
 	(fp_line
 		(start 2.055 1.7)
@@ -98,7 +323,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "2827917d-eab0-4009-b7af-a6a90883c202")
+		(uuid "d61bfd9f-46f4-4534-83a5-40ffe65ee8cc")
 	)
 	(fp_line
 		(start -0.8 -1.45)
@@ -108,7 +333,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "c2d27da3-9b39-4bc9-b4ac-c50eff7ae1ea")
+		(uuid "cc1ac13c-d8c3-4e78-aefd-92416ba5bb51")
 	)
 	(fp_line
 		(start -0.8 1.45)
@@ -118,7 +343,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "5b07ee24-6c0c-47e3-abc9-de77ce52c67d")
+		(uuid "7494a458-83fa-4ad8-89c4-a97a9fbd43b5")
 	)
 	(fp_line
 		(start 0.8 -1.45)
@@ -128,7 +353,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "50c9bde1-3069-4242-aedf-1cdda09812ff")
+		(uuid "c968ea5e-bcf0-46b5-868a-0404b3a1ce03")
 	)
 	(fp_line
 		(start 0.8 1.45)
@@ -138,7 +363,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "4aa5b790-5764-42d2-934a-27c45c64ea1b")
+		(uuid "70c649c9-a5bb-45d5-8277-8d69332fc057")
 	)
 	(fp_circle
 		(center -2.645 -0.95)
@@ -149,7 +374,19 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "351886b9-a8e2-468f-805c-c81098bb2631")
+		(uuid "cd12ea9b-ebe0-4d58-bda3-d02b860407bd")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "fe9b0b6d-6110-47a3-8c68-c4966913d98a")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
 	)
 	(pad "1" smd roundrect
 		(at -1.145 -0.95)
@@ -157,7 +394,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.125)
 		(solder_mask_margin 0.102)
-		(uuid "4ef1bb65-16d0-4df2-9f0a-193749003906")
+		(uuid "4b2076eb-ca74-4326-812d-3331a1fbec8e")
 	)
 	(pad "2" smd roundrect
 		(at -1.145 0)
@@ -165,7 +402,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.125)
 		(solder_mask_margin 0.102)
-		(uuid "f7f3f454-3e61-42d6-a3ab-40ee392e98fd")
+		(uuid "3014723b-2d0c-4547-977e-acdf190360c1")
 	)
 	(pad "3" smd roundrect
 		(at -1.145 0.95)
@@ -173,7 +410,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.125)
 		(solder_mask_margin 0.102)
-		(uuid "1b62e6cd-f480-4326-91ab-4c24d5431b75")
+		(uuid "5975bb37-6aa3-4acb-a55c-a109d071b494")
 	)
 	(pad "4" smd roundrect
 		(at 1.145 0.95)
@@ -181,7 +418,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.125)
 		(solder_mask_margin 0.102)
-		(uuid "cf2085f2-4044-47a4-8c30-5c56c112f4dc")
+		(uuid "74769f39-1c76-4ee2-8f32-70cdca3a00bf")
 	)
 	(pad "5" smd roundrect
 		(at 1.145 -0.95)
@@ -189,7 +426,7 @@
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.125)
 		(solder_mask_margin 0.102)
-		(uuid "3047debe-b9f3-45a5-8f6d-ad6ce0e9e667")
+		(uuid "0fba4773-57f2-4fae-b11e-7a83f23b2c34")
 	)
 	(embedded_fonts no)
 )

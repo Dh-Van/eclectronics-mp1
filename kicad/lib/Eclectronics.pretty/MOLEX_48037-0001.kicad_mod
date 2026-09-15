@@ -3,112 +3,212 @@
 	(generator "pcbnew")
 	(generator_version "10.0")
 	(layer "F.Cu")
-	(property "Reference" "REF**"
-		(at -3.725 -4.235 0)
+	(property "Reference" "J1"
+		(at -6.3 -3.3 90)
+		(unlocked yes)
 		(layer "F.SilkS")
-		(uuid "83212f91-df00-456c-a428-2ce0e8ab0969")
+		(uuid "86992051-1f05-40c7-b6dc-f74000dfef60")
 		(effects
 			(font
-				(size 1 1)
-				(thickness 0.15)
+				(size 0.8 0.8)
+				(thickness 0.12)
 			)
 		)
 	)
-	(property "Value" "MOLEX_48037-0001"
-		(at 3.26 18.965 0)
+	(property "Value" "48037-0001"
+		(at 0 0.4 180)
+		(unlocked yes)
 		(layer "F.Fab")
-		(uuid "0b9cc1d9-6fce-4e62-800e-b014248d092b")
+		(uuid "2473d761-a424-4880-bb07-809014cc6b07")
 		(effects
 			(font
-				(size 1 1)
-				(thickness 0.15)
+				(size 0.4 0.4)
+				(thickness 0.08)
 			)
 		)
 	)
 	(property "Datasheet" ""
-		(at 0 0 0)
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6329bad4-0d25-433e-8c7b-7c4ad9350e4a")
+		(uuid "f11e7944-9144-4912-a1ce-942606deb7cb")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
-	(property "Description" ""
-		(at 0 0 0)
+	(property "Description" "Conn.; Data; USB; Plug; Shielded; Type A; Rt. Angle; Through Hole; Gold Plating | Molex Incorporated 48037-0001"
+		(at 0 0 180)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "9b05b0e6-d5f8-447b-8d4d-50e904ce1149")
+		(uuid "f799bb43-9f04-42a8-896e-8d6b87df28ad")
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 		)
 	)
+	(property "MF" "Molex"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "bba1bcc3-ee81-468f-83f5-8f7e0dd3d503")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MAXIMUM_PACKAGE_HEIGHT" "4.6mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3996c7bb-c72f-46e2-ba65-bef46e6e4e09")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "277175bc-9dea-42e6-9721-100491b42f4d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Price" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "315e09b4-3d9a-4019-8a37-9de5095dc5d0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Check_prices" "https://www.snapeda.com/parts/48037-0001/Molex/view-part/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c3d580b7-c5bc-4077-87b3-ffb1f5a3370a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "STANDARD" "Manufacturer Recommendations"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a48d0977-552d-4126-a6e6-29176b0be373")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PARTREV" "D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "27eb63fd-1e61-41b6-857c-78a44fbf0e0e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SnapEDA_Link" "https://www.snapeda.com/parts/48037-0001/Molex/view-part/?ref=snap"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "76dd03a4-981d-4b48-8958-fa759f3b92fa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MP" "48037-0001"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "36028b55-fcd2-4f96-80bb-01a0d8cf7304")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Purchase-URL" "https://www.snapeda.com/api/url_track_click_mouser/?unipart_id=49135&manufacturer=Molex&part_name=48037-0001&search_term=None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2d7bcdc7-27a7-406d-9fdf-e33c157629cb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Availability" "In Stock"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4aab2b80-b2e0-4394-8982-3120298f99dc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER" "Molex"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ea47906d-0795-4920-b202-4734469f3ec7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(sheetname "/")
+	(sheetfile "MP1.kicad_sch")
 	(attr through_hole)
 	(duplicate_pad_numbers_are_jumpers no)
-	(fp_line
-		(start -6 2)
-		(end -6 2.75)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "b6d91c69-f57a-4b32-9e5b-48fc41fb37c2")
-	)
-	(fp_line
-		(start -6 2.75)
-		(end -6 17.8)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "e0b61243-7e3a-4aa8-8173-6ee20e13750d")
-	)
-	(fp_line
-		(start -6 2.75)
-		(end 6 2.75)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "3bd15a16-59f9-4563-8dcb-fe3bc9acc2ca")
-	)
-	(fp_line
-		(start -6 17.8)
-		(end 6 17.8)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "22077c34-bbba-4ba1-9a2e-0f4c527cdbd4")
-	)
-	(fp_line
-		(start 6 2.75)
-		(end 6 2)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "929797d9-605a-4847-ba31-850f688a5b9d")
-	)
-	(fp_line
-		(start 6 17.8)
-		(end 6 2.75)
-		(stroke
-			(width 0.127)
-			(type solid)
-		)
-		(layer "F.SilkS")
-		(uuid "58385bc3-c0a0-43b4-ae68-ce4fa97214fb")
-	)
 	(fp_circle
 		(center 3.5 -3.4)
 		(end 3.6 -3.4)
@@ -118,7 +218,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "d7c4d629-d678-469f-954c-d4e00342d394")
+		(uuid "73954b2e-aafd-4f66-9bec-8a06057073b5")
 	)
 	(fp_line
 		(start -6.75 -3.11)
@@ -128,7 +228,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "cfa38812-321d-4800-98d1-01dee4487c9b")
+		(uuid "e9b10504-5804-47a9-8d44-e1047c164cb4")
 	)
 	(fp_line
 		(start -6.75 18.05)
@@ -138,7 +238,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "ef552123-3d2d-4e53-82aa-403886c01964")
+		(uuid "54ffde81-6ef5-4306-b4e5-9d6a1c5cda6b")
 	)
 	(fp_line
 		(start 6.75 -3.11)
@@ -148,7 +248,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "be30738b-76a3-4ce4-982f-b7d7040b9b2e")
+		(uuid "1a499d5a-9348-4553-b6d4-3c6db68a8a84")
 	)
 	(fp_line
 		(start 6.75 18.05)
@@ -158,7 +258,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "da33cf6e-f50f-44a0-be36-05e6dd4e6d32")
+		(uuid "0a5f1dfb-109c-4de2-9b4f-3ad01c0f157b")
 	)
 	(fp_line
 		(start -6 -1)
@@ -168,7 +268,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "6577aa46-c73b-458b-a63d-f4aa8b451f3c")
+		(uuid "8ec040e2-8e39-41f6-aba7-34f0e398e78b")
 	)
 	(fp_line
 		(start -6 2.75)
@@ -178,7 +278,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "fa7ad83f-9be2-4864-befa-ce4d489947b8")
+		(uuid "46be4328-e3ab-44b6-8f88-502b7046dd7a")
 	)
 	(fp_line
 		(start -6 2.75)
@@ -188,7 +288,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "ec904bc6-4f29-433d-ad84-e5d7954525c6")
+		(uuid "b78cefc5-d596-4ab8-94de-07c342108496")
 	)
 	(fp_line
 		(start -6 17.8)
@@ -198,7 +298,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "9c88b19d-d131-4305-8301-799f21dce07f")
+		(uuid "9281ffcf-a7d5-498c-9236-b21dc60b8509")
 	)
 	(fp_line
 		(start 6 -1)
@@ -208,7 +308,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "5c15d655-1b2f-43eb-a92d-d60b9065bf67")
+		(uuid "a2683ef8-f7a3-4caa-af50-c21ef1b0611d")
 	)
 	(fp_line
 		(start 6 2.75)
@@ -218,7 +318,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "7db06290-f754-4522-a298-06af69ff889e")
+		(uuid "11843deb-9d7d-4299-b4c1-83a2af940f69")
 	)
 	(fp_line
 		(start 6 2.75)
@@ -228,7 +328,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "221a02db-152c-4501-a993-3b901f272241")
+		(uuid "afd3ec75-f518-42ca-8cc1-86d0fc29a96f")
 	)
 	(fp_line
 		(start 6 17.8)
@@ -238,7 +338,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "799fd6f8-cd34-40be-babe-3491e031bd38")
+		(uuid "95916e35-09a3-4fe1-98bb-6f7a001232ec")
 	)
 	(fp_circle
 		(center 3.5 -3.4)
@@ -249,12 +349,24 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "abcd6838-5ed6-452e-abf7-5418a551eaee")
+		(uuid "aa68d919-51e8-4d5f-8d2d-3bc63d60b3c4")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -1 180)
+		(unlocked yes)
+		(layer "F.Fab")
+		(uuid "91ab9765-be1d-4117-a835-f30c0f687e12")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.08)
+			)
+		)
 	)
 	(fp_text user "PCB EDGE"
-		(at 6.28 2.47 0)
+		(at 6.28 2.47 180)
 		(layer "F.Fab")
-		(uuid "a38b7e1e-7257-449b-9892-93e63e848ab2")
+		(uuid "32cc5a6c-e66a-4918-a60d-6268323f6a7b")
 		(effects
 			(font
 				(size 0.32 0.32)
@@ -267,14 +379,14 @@
 		(size 1.25 1.25)
 		(drill 1.25)
 		(layers "*.Cu" "*.Mask")
-		(uuid "1b9b76f7-57ae-49c0-8b0c-65df0249a92a")
+		(uuid "f0fd36cd-db26-43d3-a206-cdeee04c8a73")
 	)
 	(pad "" np_thru_hole circle
 		(at 2.25 0)
 		(size 1.25 1.25)
 		(drill 1.25)
 		(layers "*.Cu" "*.Mask")
-		(uuid "7d544dc1-7cbe-4228-8f26-064cf0886e70")
+		(uuid "d90da9bc-c0a6-42b2-a617-c2bcd4d1cace")
 	)
 	(pad "1" thru_hole rect
 		(at 3.5 -2.1)
@@ -283,7 +395,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.0762)
-		(uuid "02cc3011-f3b2-4597-b034-8f0851bcee1d")
+		(uuid "ab921148-9634-4e3a-a121-f4112cbb6742")
 	)
 	(pad "2" thru_hole circle
 		(at 1 -2.1)
@@ -292,7 +404,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.0762)
-		(uuid "dd7da6d7-f14f-4f21-98ad-dd446ec01a27")
+		(uuid "f6c1c26a-c85b-4ffa-b95e-0f3e5250bb1c")
 	)
 	(pad "3" thru_hole circle
 		(at -1 -2.1)
@@ -301,7 +413,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.0762)
-		(uuid "efb1a5cf-a8e1-4400-9ad0-4db2935acf80")
+		(uuid "d5d6dc9b-5951-46cc-8b98-c01b2cfba5d9")
 	)
 	(pad "4" thru_hole circle
 		(at -3.5 -2.1)
@@ -310,7 +422,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.0762)
-		(uuid "85059cba-e61c-4607-8875-32a8520e38bb")
+		(uuid "2c78492c-5c97-45db-b32e-6de94162c507")
 	)
 	(pad "S1" thru_hole oval
 		(at 5.7 0)
@@ -319,7 +431,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.0762)
-		(uuid "35ea5d8d-54dc-4f34-9639-e293e01c8890")
+		(uuid "f8867446-ca11-42f0-90ad-ccb51ffa6a84")
 	)
 	(pad "S2" thru_hole oval
 		(at -5.7 0)
@@ -328,7 +440,7 @@
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(solder_mask_margin 0.0762)
-		(uuid "963b7dd2-f03a-4039-bc10-235b3ab89077")
+		(uuid "75917ddb-f5fd-47ad-a34e-73ca70fa1683")
 	)
 	(embedded_fonts no)
 )
