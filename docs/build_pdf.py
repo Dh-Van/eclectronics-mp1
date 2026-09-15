@@ -125,7 +125,7 @@ while i < len(lines):
     if ln.strip() == "":
         out.append(""); i += 1; continue
     if re.match(r"^https?://\S+$", ln.strip()):
-        out.append(r"\begin{center}\url{" + ln.strip() + "}\end{center}"); i += 1; continue
+        out.append(r"\begin{center}\url{" + ln.strip() + r"}\end{center}"); i += 1; continue
     out.append(inline(ln)); i += 1
 
 
