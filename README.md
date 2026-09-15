@@ -8,7 +8,7 @@ A USB-stick style board that plugs into a USB-A port, regulates 5 V down to 3.3 
 |---|---|
 | `kicad/` | KiCad 10 project: schematic, PCB layout, project settings. `kicad/lib/` holds the custom symbol library (`Eclectronics.kicad_sym`) and footprints (`Eclectronics.pretty/`) for the USB plug, MCP1702 and MCP6021. The project's `sym-lib-table` / `fp-lib-table` point at these with `${KIPRJMOD}` paths, so the project opens on any machine with no extra setup. |
 | `ltspice/` | LTspice simulation. `sim.asc` is the 500-run Monte Carlo of the oscillator period (1 % resistors, 5 % cap); `sim.log` has the measured period for every run. The 290 MB `sim.raw` waveform file is not committed – rerun `sim.asc` to regenerate it. |
-| `docs/` | `MP1_report.md` (design choices + period analysis), `MP1_BOM.csv`, `MP1_schematic.pdf`, the assignment PDF and the allowed parts list. |
+| `docs/` | `MP1_report.md` / `MP1_report.pdf` (design choices + period analysis; `build_pdf.py` regenerates the PDF with lualatex), `MP1_BOM.csv`, `MP1_schematic.pdf`, the assignment PDF and the allowed parts list. |
 
 ## Key numbers
 

@@ -31,11 +31,11 @@ There is no 555 timer, microcontroller, or crystal on the list. The only active 
 
 **J1 – Molex 48037-0001 USB-A plug.** This is the only connector on the list. It is a plug, not a socket, so the board goes into the computer directly like a USB stick, with no cable. Only the VBUS (5 V) and GND pins are used. D+ and D- are left unconnected: this board never talks to the computer, it only takes power. A USB port will give up to 100 mA to a device that never enumerates, and this circuit draws about 7 mA on average (about 1 mA for the op-amp plus 12 mA for the LED half of the time), so that is plenty.
 
-**U1 – MCP1702 3.3 V regulator (LDO).** This is the only regulator on the list, and it is exactly what the assignment asks for: 3.3 V out from the 5 V USB input. It is a fixed 3.3 V part so it needs no setting resistors, and it can supply 250 mA, far more than this circuit uses. A linear regulator wastes the extra 1.7 V as heat, but at 7 mA that is only about 12 mW, which a SOT-23 handles easily.
+**U1 – MCP1702 3.3 V regulator (LDO).** This is the only regulator on the list, and it is exactly what the assignment asks for: 3.3 V out from the 5 V USB input. It is a fixed 3.3 V part so it needs no setting resistors, and it can supply 250 mA, far more than this circuit uses.
 
 **C1 (1 uF) and C3 (10 uF) – regulator capacitors.** The MCP1702 datasheet says it needs at least 1 uF of ceramic capacitance on both the input and the output to be stable. The list only has two caps that big: 1 uF and 10 uF. I used the 1 uF on the input (C1) and the 10 uF on the output (C3). The bigger one goes on the output because that is the side that feeds the whole 3.3 V rail, so it also acts as a bulk cap that supplies the 12 mA step each time the LED turns on. The input side is fed by the USB port, which already has a lot of capacitance behind it, so the minimum 1 uF is enough there.
 
-**C5 (1 uF) – op-amp bypass cap.** A bypass cap right next to the op-amp supply pin keeps the supply clean when the output switches. The MCP6021 datasheet recommends 0.1 uF to 1 uF. I used the 1 uF rather than the 0.1 uF for two reasons: the op-amp output steps by 12 mA every time the LED turns on, and a bigger cap holds the supply pin steadier during that step; and the 0.1 uF is the tight-tolerance timing cap (see below), so I wanted to keep it for the timer only.
+**C5 (1 uF) – op-amp bypass cap.** A bypass cap right next to the op-amp supply pin keeps the supply clean when the output switches. The MCP6021 datasheet recommends 0.1 uF to 1 uF. I used the 1 uF rather than the 0.1 uF for two reasons: the op-amp output steps by 12 mA every time the LED turns on, and a bigger cap holds the supply pin steadier during that step, and the 0.1 uF is the tight-tolerance timing cap (see below), so I wanted to keep it for the timer only.
 
 ## 3. Oscillator
 
@@ -59,17 +59,17 @@ There is no 555 timer, microcontroller, or crystal on the list. The only active 
 
 The parts list only has 1% resistors in a fixed set of values, and only a handful of capacitor values, so the values were picked to make 1 s out of what is available.
 
-- **C4 = 0.1 uF.** The period is proportional to $R_4 C_4$, so the cap tolerance goes straight into the period. Looking at the list, the 0.1 uF is a 5% part (the "J" in its part number), the 10 uF and 1 uF are 10% ("K"), and the 1 nF, 100 pF and 10 pF are 1% C0G parts ("F"). The 1% caps are too small to use: 1 nF would need a 300 M resistor, and the biggest resistor on the list is 10 M. The 10% caps would blow the tolerance budget (Section 6.4). So the 0.1 uF 5% cap is the best-tolerance cap that gives a usable resistor value. It is an X7R part, which loses a little capacitance with temperature and with DC voltage across it, but at an average of 1.65 V on a 50 V rated part that effect is small.
+- **C4 = 0.1 uF.** The period is proportional to $R_4 C_4$, so the cap tolerance goes straight into the period. Looking at the list, the 0.1 uF is a 5% part, the 10 uF and 1 uF are 10%, and the 1 nF, 100 pF and 10 pF are 1% parts. The 1% caps are too small to use: 1 nF would need a 300 M resistor, and the biggest resistor on the list is 10 M. The 10% caps would blow the tolerance budget (Section 6.4). So the 0.1 uF 5% cap is the best-tolerance cap that gives a usable resistor value. 
 - **R4 = 3.01 M.** With C4 = 0.1 uF, $R_4 C_4 = 0.301$ s, and the period works out to 1.00 s with the threshold resistors below. The list also has 2 M and 10 M. 10 M would need the thresholds to be within about 20 mV of the rails, which the op-amp cannot hold reliably. 2 M would work but needs the thresholds much closer to the rails than 3.01 M does. 3.01 M gave the cleanest match with values on the list and keeps the thresholds a comfortable 0.5 V away from the rails.
 - **R3 = 40.2 k, R5 = 20 k.** These set how far apart the thresholds are. If they are set too close to the rails, the period becomes sensitive to exactly how close the op-amp output gets to the rails. If they are set too close to $V_{mid}$, the swing on the capacitor is small, so the op-amp's input offset (up to 0.5 mV) and noise start to matter, and a bigger $R_4 C_4$ is needed. The 2:1 ratio puts the thresholds at about 0.53 V and 2.77 V, roughly 0.5 V from each rail and 1.1 V from the middle, which is a good compromise. With this ratio the period comes out to 1.00 s (Section 6). Both values are on the list, and both are well above the 2.5 k that the divider adds in series with R3, so that extra 2.5 k is a small correction rather than a big one.
-- **R1 = R2 = 4.99 k.** Equal values give exactly half the supply. That makes the two thresholds symmetric about the middle, so the charge and discharge halves take the same time and the LED is on for half the period (50% duty cycle). 4.99 k is low enough that the divider is "stiff" (R3 does not pull it around much), but high enough that it only wastes about 0.3 mA. Bigger values would waste less but would add more series resistance in the threshold network; smaller values would waste more current for no benefit.
+- **R1 = R2 = 4.99 k.** Equal values give exactly half the supply. That makes the two thresholds symmetric about the middle, so the charge and discharge halves take the same time and the LED is on for half the period (50% duty cycle). 4.99 k is low enough that the divider is "stiff" (R3 does not pull it around much), but high enough that it only wastes about 0.3 mA.
 - **C4 goes to ground, not to $V_{mid}$.** Either works. Grounding it is simpler to route, and because the thresholds are symmetric about the middle it does not change the timing.
 
 ## 4. LED
 
 **D1 (red LED) and R6 (110 Ohm).** The list has three 0805 LEDs (red, green, blue). I picked the red one (LTST-C171KRKT) because it has the lowest forward voltage, about 2 V. On a 3.3 V supply that leaves 1.3 V across the resistor, so it is the brightest option. The green and blue LEDs have a forward voltage around 3 V, which on a 3.3 V supply would only leave a few tenths of a volt for the resistor and give a few mA at best.
 
-The LED is driven straight from the op-amp output through R6, with the anode toward the op-amp and the cathode to ground, so the LED is on when the output is high, i.e. for half of each period. The current is set by R6:
+The LED is driven straight from the op-amp output through R6, with the anode toward the op-amp and the cathode to ground, so the LED is on when the output is high, for half of each period. The current is set by R6:
 
 $$
 I_{LED} = \frac{3.3\ \text{V} - V_f}{R_6} = \frac{3.3 - 2.0}{110} \approx 12\ \text{mA}
@@ -81,7 +81,7 @@ Loading the op-amp output with 12 mA pulls its high level a little below 3.3 V (
 
 ## 5. Simulation setup (LTspice)
 
-The circuit was simulated in LTspice. There is no LTspice model for the MCP6021, so I used the built-in `UniversalOpAmp2` with a rail-to-rail output and a 3.3 V single supply. It captures what matters here (finite slew, output that swings to the rails, inputs that draw no current) but is not the exact part, so the sim is a check on the math rather than a perfect prediction.
+The circuit was simulated in LTspice. There is no LTspice model for the MCP6021, so I used the built-in `UniversalOpAmp2` with a rail-to-rail output and a 3.3 V single supply. It captures what matters here, but is not the exact part, so the sim is a check on the math rather than a perfect prediction.
 
 The sim starts with `.ic V(vn)=0` (capacitor empty) so it starts up the same way every run, and measures the period as the time between the second and third rising edges of the output. Skipping the first edge avoids the startup transient. The Monte Carlo run uses `.step param run 1 500 1` with `mc(value, 0.01)` on every resistor and `mc(0.1u, 0.05)` on C4, which are the real tolerances of the parts on the list.
 
@@ -167,23 +167,13 @@ Stack every tolerance in the worst direction (1% resistors, 5% cap):
 - Everything pushing $T$ long: $T = 1.071$ s (+7.1%)
 - Everything pushing $T$ short: $T = 0.932$ s (-6.8%)
 
-Both are inside the $\pm 10$% spec, with about 3% of margin left. For comparison, with one of the 10% caps from the list the worst case would be about $\pm 12$%, which fails.
-
-### 6.5 Other things that could shift the period
-
-- **Op-amp output not reaching the rails.** If the output stopped 25 mV short of each rail (the datasheet figure for a light load), the period would change by less than 0.1%.
-- **LED load on the output.** As worked out in Section 4, a 0.2 V droop on the high level changes the period by about +0.1%.
-- **Op-amp input offset.** The MCP6021's offset is at most 0.5 mV, against a threshold swing of 2.2 V, so it is a 0.02% effect.
-- **Op-amp input current.** About 1 pA against a 0.9 uA timing current: negligible.
-- **Temperature.** The resistors are 100 ppm/C parts, so a 20 C change is 0.2%. The X7R cap is the bigger effect (up to a few % over a wide temperature range) but at room temperature it is well inside the 5% tolerance already assumed.
-
-None of these come close to the 3% of margin left after the worst-case stack.
+Both are inside the $\pm 10$% spec, with about 3% of margin left.
 
 ### 6.6 Monte Carlo simulation (LTspice)
 
 I ran the circuit in LTspice with `.step param run 1 500 1` and Monte Carlo tolerances on every part: `mc(value, 0.01)` on the resistors and `mc(0.1u, 0.05)` on C4. Each run measures the time between two rising edges of the output.
 
-[FIGURE 1 HERE: LTspice plot of measured period vs. run number for the 500 Monte Carlo runs. Caption: "Figure 1. Period of each Monte Carlo run. The dashed lines at 0.9 s and 1.1 s are the $\pm 10$% limits; all 500 runs are inside."]
+![Period of each Monte Carlo run. The y-axis spans 0.92-1.05 s; the +/-10% limits are 0.9 s and 1.1 s, so every run is inside.](mc_period.png)
 
 Results over 500 runs:
 
@@ -196,52 +186,6 @@ Results over 500 runs:
 | Runs inside 0.9-1.1 s | 500 / 500 |
 
 The simulated mean (0.987 s) is about 1.4% under the hand calculation (1.000 s). The difference comes from the op-amp model: a real (or modelled) op-amp does not switch instantly and does not sit exactly on the rails, and the sim uses a generic op-amp model rather than the MCP6021. Either way, every run stayed inside the $\pm 10$% window, which matches the worst-case math above.
-
-## 7. PCB design choices
-
-### 7.1 Board size and shape
-
-- The board is a 16.1 mm x 14.0 mm rectangle (225 mm^2). Part of the grade is the bounding-box area, so I made it as small as the parts allow.
-- The height is set by the USB plug: its two shield pads are 11.4 mm apart and each is 1.6 mm tall, plus the 0.5 mm copper-to-edge clearance on each side, which comes to about 14 mm. Nothing else on the board is that tall.
-- The width is set by fitting the parts in columns next to the plug: the plug's footprint takes the first 6 mm, then the regulator/power column, then the op-amp column, then the LED and its resistor. Squeezing it further would have meant overlapping courtyards.
-- A rectangle is the cheapest shape to make and the easiest to fit into a USB port.
-
-### 7.2 Where the parts went
-
-- **J1** sits on the left edge. The Molex footprint has a line marking where the board edge should be so that the plug body sits properly in a port; the board edge is on that line, and the plug is centred top-to-bottom so the board is symmetric.
-- **U1 (regulator)** is right next to J1's VBUS pin, with its input pin facing the pin, so the 5 V trace is 2.4 mm long. **C1** hangs directly below the regulator's input pin and **C3** sits directly at its output pin, because the datasheet wants those caps close to the regulator for stability.
-- **U2 (op-amp)** is in the middle of the board with its feedback parts around it: **R3** and **C4** to its left, **R5** above it, **R4** below it. The - input is a high-impedance node (it only sees the 3 M resistor), so a long trace there would pick up noise and leakage; it is about 2 mm long.
-- **C5** (op-amp bypass) is on the 3.3 V trace right where it enters the op-amp's supply pin, which is where a bypass cap needs to be.
-- **R1/R2** (the mid-rail divider) are top-left, where the 3.3 V trace running up the left edge can reach them and where the mid-rail connects to R3 with a short trace.
-- **R6 and D1** are at the bottom-right, the far end of the board from the plug, so the LED is out in the open where it can be seen when the board is plugged in.
-
-### 7.3 Layers and routing
-
-- **Two layers, all parts on top.** This is required by the assignment. It is also the cheapest board to make and only one side has to be assembled.
-- **Everything is routed on the top layer. The back layer is a solid ground pour** with no traces on it at all. A ground pour under the whole board gives every ground pin a short, low-resistance path back to the USB ground, and keeping it unbroken means there is no place where the return current has to go around a slot.
-- **Ground connections.** Each ground pad goes to the back-side pour through a via (0.8 mm, 0.4 mm drill). Where several ground pads are close together (U1, C1, C3, D1) they share one via, which saves space; the currents are a few mA so one via is more than enough. The plug's ground pin and shield pads are through-hole, so they connect straight into the pour.
-- **No vias in or touching any pad.** A via in a pad wicks solder paste down the hole during reflow, which can leave a weak joint, and on a two-terminal part it can make one end reflow differently from the other and lift the part ("tombstoning"). Every via on this board is fully outside every pad.
-- **The one crossing.** With this op-amp's pinout (OUT and IN- on opposite corners of the package, V+ in between) one trace has to cross another somewhere. Rather than jump to the back layer and cut a slot in the ground pour, the 3.3 V feed to the op-amp's supply pin passes between the two pads of R4, under the resistor body. There is 0.85 mm between R4's pads, which fits a 0.3 mm trace with 0.27 mm of clearance on each side.
-- **No top-side copper pour.** On a board this small a top pour would be chopped into small islands by the traces and would add little. If there were one, the pads would be connected to it with thermal reliefs so the pour would not act as a heat sink during soldering.
-- The bottom pour connects to the plug's through-hole pads with thermal reliefs (four 0.5 mm spokes) for the same reason: it keeps the pads solderable instead of sinking the iron's heat into the whole plane.
-
-### 7.4 Trace widths, clearances and vias
-
-- **Power traces are 0.5 mm (20 mil):** the 5 V from the plug to the regulator, the 3.3 V from the regulator to its cap and out to the rest of the board, and every ground stub to a via. 20 mil is good for about 3 A, far more than the 15 mA here, but wider power traces cost nothing on a board with this much room and give a lower-resistance rail.
-- **Exception: the 3.3 V branch to the op-amp's supply pin** narrows to 0.4 mm along the channel between R4 and C3, and to 0.3 mm for the 2 mm where it passes between R4's pads. It cannot be 20 mil there because the gap between R4's pads is only 0.85 mm, and a 0.5 mm trace would leave less than the 0.2 mm clearance required. That branch only carries the op-amp's supply current (about 1 mA) plus the LED current in short pulses, and even a 6 mil trace handles 1 A, so the narrower section has no effect on the circuit.
-- **Signal traces are 0.2 mm (8 mil):** the oscillator feedback network, the LED drive, and the mid-rail reference. These carry microamps to 12 mA. 8 mil is comfortably above the 6 mil minimum for the fab.
-- **Clearance is 0.2 mm (8 mil)** everywhere, against a 6 mil minimum. The extra 2 mil is margin for the fab's etching tolerance.
-- **Vias are 0.8 mm outer / 0.4 mm drill (31 mil / 16 mil)**, against the 24 mil / 12 mil minimum. Bigger vias are cheaper to drill reliably and give a 0.2 mm annular ring, and there was room for them.
-- **Silkscreen (top).** Every part has its reference designator in 0.8 mm text (the smallest the fab will print), placed beside the part and kept off every pad so it cannot end up under solder. The USB plug's footprint came with an outline of the plug body drawn on the silkscreen; that outline hangs off the board (the body overhangs the edge), so I removed it and kept only the pin-1 marker.
-- **Fabrication layer (top).** The F.Fab layer is the assembly drawing: each part has its body outline, its reference designator inside the outline, and its value (or part number for the ICs and connector) in small 0.5 mm text next to it. This is what an assembler uses to check placement, so it has to be readable and not overlap.
-- **Silkscreen (bottom).** The back has no parts, so it carries the board name, my name and course, and the revision and date.
-
-### 7.5 Checks
-
-- KiCad DRC: 0 errors, 0 warnings, 0 unconnected nets.
-- Schematic/PCB parity: every footprint and net on the board matches the schematic.
-- All footprints are imperial 0603 for the resistors and capacitors (`R_0603_1608Metric`, `C_0603_1608Metric`), imperial 0805 for the LED, SOT-23-3 for the regulator and SOT-23-5 for the op-amp, matching the parts list.
-- IC pin numbers in the schematic symbols were checked against the datasheet pinouts: MCP1702 (1 GND, 2 VOUT, 3 VIN) and MCP6021 (1 OUT, 2 VSS, 3 IN+, 4 IN-, 5 VDD).
 
 ## 8. Bill of materials
 
@@ -268,3 +212,9 @@ All parts are from the provided parts list. 12 line items, 15 parts total. (Also
 - It runs on 3.3 V made from USB 5 V by the only regulator on the list, with the bypass and bulk caps the datasheets ask for.
 - Every part is from the parts list. Most of them were the only option; the real choices were the timing values, the threshold ratio, the single vs. dual op-amp, and the LED colour.
 - The PCB is a two-layer, all-top-side, 16.1 x 14.0 mm board with a solid ground plane, 20 mil power and 8 mil signal traces, no vias in pads, and a clean DRC.
+
+## 10. Project files
+
+All KiCad design files, the custom symbol/footprint library, the LTspice simulation, this report and the BOM are at:
+
+https://github.com/Dh-Van/eclectronics-mp1
