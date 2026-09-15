@@ -19,3 +19,6 @@ _restore_backup_*/
 # misc
 .DS_Store
 Thumbs.db
+
+# editor
+.vscode/
